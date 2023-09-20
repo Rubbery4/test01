@@ -1,0 +1,36 @@
+server:
+  port: 9090
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    url: jdbc:mysql://acorn01.cqro5qdbxzm7.ap-northeast-2.rds.amazonaws.com:3306/acorn03?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    # url: jdbc:mysql://localhost:3307/acorn01?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: acorn01
+    password: 12341234
+    # password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: b-3af986b9-db8e-4763-8d1c-56e264139c17.mq.ap-northeast-2.amazonaws.com
+    port: 5671
+    username: acorn01
+    password: 123412341234
+    ssl:
+      enabled: true
+    queue:
+      name: acorn03
+    exchange:
+      name: acorn03-exchange
+    routing:
+      key: acorn03.#
+
+mybatis:
+  type-aliases-package: com.delivery.iceway.domain
+  mapper-locations: classpath:mapper/*.xml
+
+kakao:
+  api:
+    key: 505884f0db4be012b197ec6e83199c5c
