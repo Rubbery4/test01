@@ -12,6 +12,7 @@
 	<groupId>com.delivery</groupId>
 	<artifactId>iceway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>iceway</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -49,8 +50,8 @@
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
+			<groupId>javax.servlet</groupId> 
+			<artifactId>jstl</artifactId>  
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
@@ -95,6 +96,11 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-taglibs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope> <!-- 안되어 있는 경우 변경! -->
 		</dependency>
 	</dependencies>
 
